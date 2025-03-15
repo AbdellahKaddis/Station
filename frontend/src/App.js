@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.jsx
+import React from 'react';
+import StationList from './components/station/StationList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+
+
+const App = () => {
+
+ //  return (<>
+  // <StationForm/>
+  // <StationList/>
+  //  <footer className="p-4 text-center text-sm text-gray-600 bg-white shadow-inner">
+  //         Gas Station Dashboard © 2025
+  //       </footer>
+  // </>
+       
+  //);
+  return <RouterProvider router={router}/>
+};
 
 export default App;
