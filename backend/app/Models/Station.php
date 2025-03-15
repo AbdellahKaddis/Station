@@ -26,4 +26,10 @@ class Station extends Model
     {
         return $this->hasMany(StationOpeningHour::class);
     }
+
+    public function employees()
+    {
+        return $this->belongsToMany(Employee::class, 'employee_station')
+                    ->withPivot('start_date', 'end_date');
+    }
 }
