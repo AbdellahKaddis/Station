@@ -20,8 +20,6 @@ return new class extends Migration
             $table->foreign('station_id')->references('id')->on('stations')->onDelete('cascade');
             $table->date('start_date');
             $table->date('end_date')->nullable();
-            $table->index('employee_id');
-            $table->index('station_id');
         });
     }
 

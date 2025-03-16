@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('employee_cin', 20)->unique();
-            $table->string('last_name', 100);
-            $table->string('first_name', 100);
-            $table->string('email', 255)->unique();
-            $table->string('phone', 20);
+            $table->string('employee_cin')->unique();
+            $table->string('last_name');
+            $table->string('first_name');
+            $table->string('email')->unique();
+            $table->string('phone');
             $table->enum('gender', ['male', 'female']);
             $table->date('date_of_birth');
-            $table->string('address', 255)->nullable();
-            $table->string('nationality', 100)->nullable();
+            $table->string('address')->nullable();
+            $table->string('nationality')->nullable();
             $table->enum('status', ['active','terminated']);
-            $table->string('cnss_number', 50)->nullable();
+            $table->string('cnss_number')->nullable();
             $table->enum('contract_type', ['CDI', 'CDD']);
             $table->softDeletes(); 
             $table->timestamps();
