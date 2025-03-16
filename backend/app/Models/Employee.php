@@ -30,6 +30,7 @@ class Employee extends Model
     public function stations()
     {
         return $this->belongsToMany(Station::class, 'employee_station')
+                    ->using(EmployeeStation::class)
                     ->withPivot('start_date', 'end_date');
     }
 }
