@@ -15,7 +15,7 @@ class SaleController extends Controller
      */
     public function index(): JsonResponse
     {
-        $sales = Sale::with(['salePriceHistory', 'meterReading'])->paginate(10);
+        $sales = Sale::with(['salePriceHistory', 'meterReading.pump'])->paginate(10);
         return response()->json(SaleResource::collection($sales));
     }
 
