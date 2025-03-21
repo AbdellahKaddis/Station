@@ -38,4 +38,8 @@ class Employee extends Model
     {
         return $this->hasMany(Planning::class);
     }
+    public function presences()
+    {
+        return $this->hasMany(Presence::class);
+    }
 }
