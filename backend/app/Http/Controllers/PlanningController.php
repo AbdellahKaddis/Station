@@ -15,7 +15,7 @@ class PlanningController extends Controller
      */
     public function index()
     {
-        $plannings = Planning::with('employee')->get(); // Eager load employee relationship
+        $plannings = Planning::with('employee')->latest()->get(); // Eager load employee relationship
         return PlanningResource::collection($plannings);
     }
 

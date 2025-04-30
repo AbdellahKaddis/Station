@@ -1,38 +1,51 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Auth\LoginRequest;
 
 class AuthenticatedSessionController extends Controller
 {
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): Response
+    public function store(LoginRequest $request): JsonResponse
     {
+        // Authenticate the user
         $request->authenticate();
 
-        $request->session()->regenerate();
+        // Get the authenticated user
+        $user = Auth::user();
 
-        return response()->noContent();
+        // Create a token for the user
+        $token = $user->createToken('api-token')->plainTextToken;
+
+        // Return the user and token
+        return response()->json([
+            'user' => [
+    'id' => $user->id,
+    'email' => $user->email,
+    'role' => $user->role,
+            ],
+            'token'=> $token
+        ]);
     }
 
     /**
      * Destroy an authenticated session.
      */
-    public function destroy(Request $request): Response
+    public function destroy(Request $request): JsonResponse
     {
-        Auth::guard('web')->logout();
+        // Get the authenticated user
+        $user = Auth::user();
 
-        $request->session()->invalidate();
+        // Revoke all tokens for the user
+        $user->tokens()->delete();
 
-        $request->session()->regenerateToken();
-
-        return response()->noContent();
+        // Return a success response
+        return response()->json(['message' => 'Logged out successfully']);
     }
 }

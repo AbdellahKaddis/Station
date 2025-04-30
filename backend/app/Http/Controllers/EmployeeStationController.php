@@ -15,7 +15,7 @@ class EmployeeStationController extends Controller
      */
     public function index()
     {
-        $employeeStations = EmployeeStation::with(['employee', 'station'])->paginate(10);
+        $employeeStations = EmployeeStation::with(['employee', 'station'])->latest()->paginate(10);
         return EmployeeStationResource::collection($employeeStations);
     }
 

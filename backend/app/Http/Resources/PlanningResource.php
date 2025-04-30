@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -18,8 +19,8 @@ class PlanningResource extends JsonResource
             'id' => $this->id,
             'week' => $this->week,
             'day' => $this->day,
-            'start_time' => $this->start_time,
-            'end_time' => $this->end_time,
+            'start_time' => (new DateTime($this->start_time))->format('H:i'),  // Format start_time to 'HH:MM'
+            'end_time' => (new DateTime($this->end_time))->format('H:i'),  
             'year' => $this->year,
             'employee_id' => $this->employee_id,
             'employee' => new EmployeeResource($this->whenLoaded('employee')), // Include employee data if loaded

@@ -33,4 +33,14 @@ class Station extends Model
                     ->using(EmployeeStation::class)
                     ->withPivot('start_date', 'end_date');
     }
+
+    public function tanks()
+    {
+        return $this->hasMany(Tank::class);
+    }
+
+    public function salePriceHistories()
+    {
+        return $this->hasMany(SalePriceHistory::class);
+    }
 }

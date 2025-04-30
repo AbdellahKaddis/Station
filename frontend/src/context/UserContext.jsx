@@ -20,6 +20,7 @@ const UserContext = ({children})=> {
 const logout = ()=> {
     setUser({});
     setIsAuthenticated(false);
+    localStorage.removeItem("token");
 }
 const setIsAuthenticated = (authenticated) => {
     _setIsAuthenticated(authenticated);

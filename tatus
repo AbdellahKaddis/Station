@@ -1,0 +1,191 @@
+[33mcommit 40e0a0a878860756c4b9f4786320d0b307e028d2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:38:42 2025 +0100
+
+    implemet EmployeeStatio model
+
+[33mcommit 60289c6f669c1f5c091e26ad943374f315ebbee6[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:37:48 2025 +0100
+
+    implement employee-stations crud
+
+[33mcommit be52abfc8f2f28005b8969ebad9d1ae20f09edaa[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:37:19 2025 +0100
+
+    implement employee crud
+
+[33mcommit 26e9106f02b57b242633d33ba4e9b236a71ad049[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:36:39 2025 +0100
+
+    implement employees employee-stations ressource
+
+[33mcommit 4dc656c12bb319a3a0e805066da1b707c502dfc8[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:35:22 2025 +0100
+
+    implement employee station request
+
+[33mcommit cc6db828035eff80a98bb47e58585955b56f2095[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:34:32 2025 +0100
+
+    implement employees request
+
+[33mcommit 9da34793738dccda6fb097631a44ae9523bd37ee[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:33:10 2025 +0100
+
+    implement employees and employee-stations routes
+
+[33mcommit 8e7d1760b6448527c7b2a6b3728a5900f38ac65a[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:31:51 2025 +0100
+
+    implement reverse pivot relationship
+
+[33mcommit bfad304a3f6be893049c0eeea53550c377289d8c[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sun Mar 16 09:30:29 2025 +0100
+
+    update employees and station emploee migration
+
+[33mcommit a5be7f8bcb42d3ef94810e7c3675ed1d9389ea15[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 10:43:52 2025 +0100
+
+    define many to many relationship with Stationss
+
+[33mcommit dc6e908cc9b0bb05865eb5251803b1b7657b0849[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 10:43:27 2025 +0100
+
+    define many to many relationship with employees
+
+[33mcommit 6569e7cc7db4a8bb53bfde9a873345b0fe6b3e52[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 10:41:56 2025 +0100
+
+    create pivot table  migration for Employees and Stations  model
+
+[33mcommit 1c6bbed3a02a2f715b9e92e4ffc5283e12f2f20d[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 10:07:18 2025 +0100
+
+    create initial migration for Employees model
+
+[33mcommit 69b754ee7cec689dac881aad17ff2759554f9789[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:43:08 2025 +0100
+
+    cleanup and update files
+
+[33mcommit fc0f6c27b4f120afaf4aabd954af17bf09643552[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:42:16 2025 +0100
+
+    implement station routes
+
+[33mcommit 9ddc0b8b1a1f9ac0ae062233bce542dba533396c[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:41:30 2025 +0100
+
+    create StationOpeningHourController.php
+
+[33mcommit 47d6f6bd152e4fc2ae540245530d8562530da424[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:40:24 2025 +0100
+
+    add layout components and station componnets
+
+[33mcommit 6e974db5e050e81fc3e904928ce296d23515bdd3[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:38:44 2025 +0100
+
+    configure tailwind
+
+[33mcommit 118ae655aa3670ee38cdd661d562d348720d7537[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:36:56 2025 +0100
+
+    create stationApi service with CRUD operations
+
+[33mcommit ee3f1b2333bf5b186191a4f9f1b50c326cd18e5a[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:36:09 2025 +0100
+
+    implement layout component
+
+[33mcommit 318e4f256040ebdc2c8683c6742137b9e174f360[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:35:20 2025 +0100
+
+    add routing
+
+[33mcommit 02bf4da6e4877f877b07e531a22d24a9ff550fe8[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:33:58 2025 +0100
+
+     configure axios client for backend API requests
+
+[33mcommit 59d8514c0c9f5713f67c55a6b951e78d809f46c5[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:31:23 2025 +0100
+
+     enhance StationOpeningHour model with new relationships/attributes
+
+[33mcommit be8ea54e87e1169e85a04cf367da450f6c4f4247[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:30:49 2025 +0100
+
+     enhance Station model with new relationships/attributes
+
+[33mcommit 6cf62cbecc29f99d9025738e834ce0c0ea2ee182[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:28:25 2025 +0100
+
+    add validation rules for storing stations
+
+[33mcommit d7a2c7f288cf2fd8cb97f36012a54296fd6fb802[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:26:32 2025 +0100
+
+    add validation rules for storing and updating stations
+
+[33mcommit 89c1b4bfb85cdc339fb33c06cd0f14426c371671[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:23:21 2025 +0100
+
+    add soft delete support to stations table
+
+[33mcommit 6b92dfbcd11cd31914c4276efcf9d38c9bae12c6[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:22:17 2025 +0100
+
+    create initial migration for StationOpeningHour model
+
+[33mcommit c01e64364be73d6e488a6698c7548d62c00ea069[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:20:32 2025 +0100
+
+    implement api to check for email existance
+
+[33mcommit 5af5de33947b776e5dab4b5be555d245bb6a9273[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:19:04 2025 +0100
+
+    Implement crud for station
+
+[33mcommit 7ed4d6476be17769d3306c58a63e24c0a3418e59[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 15 09:16:10 2025 +0100
+
+    create initial migration for stations model
+
+[33mcommit eb67c83bbcb9987ab236b1aa55a2dd0ff05a11a8[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: AbdellahKaddis <abdellahkaddis8@gmail.com>
+Date:   Sat Mar 8 13:20:09 2025 +0100
+
+    Initial commit

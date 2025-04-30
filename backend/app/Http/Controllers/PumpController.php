@@ -14,7 +14,7 @@ class PumpController extends Controller
      */
     public function index()
     {
-            $pumps = Pump::with(['tank.station'])->paginate(10);
+            $pumps = Pump::with(['tank.station'])->latest()->paginate(10);
             return PumpResource::collection($pumps);
     }
 

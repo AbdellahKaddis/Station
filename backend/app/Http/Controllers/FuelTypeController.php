@@ -12,7 +12,7 @@ class FuelTypeController extends Controller
      */
     public function index()
     {
-        return response()->json(FuelType::all(), 200);
+        return response()->json(FuelType::latest()->get(), 200);
     }
 
     /**

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { cities } from "morocco-cities";
-import stationApi from "../../services/api/station/stationApi";
+import utilityApi from "../../services/api/utility/utilityApi";
 
 const StationFormModal = ({ isOpen, onClose, onSubmit, initialData }) => {
   const defaultFormData = {
@@ -118,7 +118,7 @@ const StationFormModal = ({ isOpen, onClose, onSubmit, initialData }) => {
       newErrors.email = "Invalid email format";
     } else if(!initialData)
       {
-        const {data} = await stationApi.isEmailExist(formData.email);
+        const {data} = await utilityApi.isEmailExist(formData.email,'station');
         if (data.exists) {
           newErrors.email = "This email is already registered.";
         }
@@ -243,12 +243,11 @@ const StationFormModal = ({ isOpen, onClose, onSubmit, initialData }) => {
         {city.name}
       </option>
     ));
-    console.log(formData)
   if (!isOpen) return null;
   return (
 
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-2xl max-h-[80vh] overflow-y-auto relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-2xl max-h-[80vh] overflow-y-auto relative z-50">
       {/* Close X button */}
       <button
         type="button"

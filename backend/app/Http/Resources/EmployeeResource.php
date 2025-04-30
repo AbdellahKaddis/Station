@@ -30,6 +30,7 @@ class EmployeeResource extends JsonResource
         'contract_type' => $this->contract_type,
         'created_at' => $this->created_at,
         'updated_at' => $this->updated_at,
+        'stations' => $this->stations,
         ];
     }
 }

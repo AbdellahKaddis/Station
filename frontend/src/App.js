@@ -1,9 +1,9 @@
 // src/App.jsx
 import React from 'react';
-import StationList from './components/station/StationList';
 
 import { RouterProvider } from 'react-router-dom';
 import { router } from './router';
+import UserContext from './context/UserContext';
 
 
 const App = () => {
@@ -17,7 +17,9 @@ const App = () => {
   // </>
        
   //);
-  return <RouterProvider router={router}/>
-};
-
+  return <UserContext>
+    <RouterProvider router={router}/>
+  
+  </UserContext>
+}
 export default App;

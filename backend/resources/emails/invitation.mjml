@@ -1,0 +1,12 @@
+@'
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text>Hello!</mj-text>
+        <mj-button href="{{ $url }}">Accept Invitation</mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+'@ | Out-File -FilePath "resources\emails\invitation.mjml" -Encoding utf8

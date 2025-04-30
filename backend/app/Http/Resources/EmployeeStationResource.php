@@ -16,7 +16,7 @@ class EmployeeStationResource extends JsonResource
     {
         return [
             
-            // 'id' => $this->id,
+            'id' => $this->id,
             'employee' => [
                 'id' => $this->employee->id,
                 'name' => $this->employee->first_name . ' ' . $this->employee->last_name,

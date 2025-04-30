@@ -14,7 +14,7 @@ class StationController extends Controller
      */
     public function index()
     {
-        $stations = Station::with('openingHours')->get();
+        $stations = Station::with('openingHours')->latest()->get();
         return response()->json($stations);
     }
 

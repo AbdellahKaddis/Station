@@ -10,6 +10,5 @@ const stationApi = {
     getAllStations:async()=> await axiosClient.get('/stations'),
     updateStation:async(station)=> await axiosClient.put(`/stations/${station.id}`,station),
     deleteStation:async(stationId)=> await axiosClient.delete(`/stations/${stationId}`),
-    isEmailExist:async(email)=> await axiosClient.post('/check-email ',{email}),
 };
 export default stationApi;

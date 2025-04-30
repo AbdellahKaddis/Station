@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\MeterReading;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -23,6 +24,7 @@ class PumpResource extends JsonResource
             'tank' => new TankResource($this->whenLoaded('tank')),
             'station' => $this->whenLoaded('station'), // Include station if loaded
             // 'station' => new StationResource($this->whenLoaded('station')), // Include station if loaded
+            'meter_reading' => $this->meterReadings,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

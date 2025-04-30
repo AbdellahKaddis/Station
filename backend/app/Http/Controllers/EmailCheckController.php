@@ -14,7 +14,7 @@ class EmailCheckController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function checkEmail(Request $request)
+    public function checkEmail(Request $request,$model)
     {
         // Validate the incoming request
         $validator = Validator::make($request->all(), [
@@ -28,12 +28,24 @@ class EmailCheckController extends Controller
             ], 422);
         }
 
-        $emailExists = Station::where('email', $request->email)->exists();
-
-        if ($emailExists) {
-            return response()->json(['exists' => true]);
-        } else {
-            return response()->json(['exists' => false]);
+        $models = [
+            'station' => 'App\\Models\\Station',
+            'employee' => 'App\\Models\\Employee',
+            'supplier' => 'App\\Models\\Supplier',
+        ];
+    
+        $className = $models[$model] ?? null;
+    
+        if (!$className) {
+            return response()->json([
+                'error' => 'Invalid model specified.',
+            ], 400);
         }
+    
+        $emailExists = $className::where('email', $request->email)->exists();
+
+        return response()->json([
+            'exists' => $emailExists,
+        ]);
 }
 }

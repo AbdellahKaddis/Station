@@ -16,7 +16,7 @@ class SalePriceHistoryController extends Controller
      */
     public function index()
     {
-        $salePriceHistories = SalePriceHistory::paginate(10);
+        $salePriceHistories = SalePriceHistory::orderBy('start_date', 'desc')->paginate(10);
         return SalePriceHistoryResource::collection($salePriceHistories);
     }
 

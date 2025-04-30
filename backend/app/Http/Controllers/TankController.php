@@ -13,7 +13,7 @@ class TankController extends Controller
 {
     public function index()
     {
-        $tanks = Tank::paginate(10); // Paginate results
+        $tanks = Tank::latest()->get(); // Paginate results
         return TankResource::collection($tanks);
     }
 

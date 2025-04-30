@@ -14,8 +14,13 @@ class FuelType extends Model
         return $this->hasMany(Tank::class);
     }
 
-    public function fuelType()
+    public function stockEntries()
     {
         return $this->hasMany(StockEntry::class);
+    }
+
+    public function salePriceHistories()
+    {
+        return $this->hasMany(SalePriceHistory::class);
     }
 }

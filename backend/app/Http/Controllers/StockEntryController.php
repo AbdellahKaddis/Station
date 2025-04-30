@@ -14,7 +14,7 @@ class StockEntryController extends Controller
     // List all stock entries with pagination
     public function index()
     {
-        $stockEntries = StockEntry::with(['tank', 'fuelType', 'supplier'])->paginate(10);
+        $stockEntries = StockEntry::with(['tank', 'fuelType', 'supplier'])->latest()->paginate(10);
         return StockEntryResource::collection($stockEntries);
     }
 

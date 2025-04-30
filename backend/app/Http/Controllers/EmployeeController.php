@@ -15,7 +15,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return EmployeeResource::collection(Employee::paginate(10));
+        return EmployeeResource::collection(Employee::with('stations')->latest()->paginate(10));
     }
 
     /**

@@ -28,4 +28,9 @@ class Pump extends Model
         {
             return $this->hasOneThrough(Station::class, Tank::class, 'id', 'id', 'tank_id', 'station_id');
         }
+
+        public function meterReadings()
+        {
+            return $this->hasMany(MeterReading::class);
+        }
 }

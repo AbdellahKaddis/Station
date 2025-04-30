@@ -26,7 +26,7 @@ class StorePlanningRequest extends FormRequest
             'day' => 'required|integer|min:0|max:6', // 0 = Sunday, 6 = Saturday
             'start_time' => 'required|date_format:H:i',
             'end_time' => 'required|date_format:H:i|after:start_time',
-            'year' => 'required|integer|min:2000|max:2100',
+            'year' => 'required|integer',
             'employee_id' => 'required|exists:employees,id', // Ensure employee_id exists in employees table
         ];
     }

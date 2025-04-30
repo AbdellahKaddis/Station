@@ -15,7 +15,7 @@ class MeterReadingController extends Controller
      */
     public function index(): JsonResponse
     {
-        $meterReadings = MeterReading::with('pump')->paginate(10);
+        $meterReadings = MeterReading::with('pump')->orderBy('updated_at', 'desc')->paginate(10);
         return response()->json(MeterReadingResource::collection($meterReadings));
     }
 

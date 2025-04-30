@@ -14,7 +14,7 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $suppliers = Supplier::paginate(10); // Paginate results
+        $suppliers = Supplier::latest()->paginate(10); // Paginate results
         return SupplierResource::collection($suppliers);
     }
 

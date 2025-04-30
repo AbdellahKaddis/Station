@@ -15,8 +15,8 @@ class PresenceController extends Controller
      */
     public function index()
     {
-        $plannings = Presence::with('employee')->get(); // Eager load employee relationship
-        return PresenceResource::collection($plannings);
+        $presences = Presence::with('employee')->latest()->get(); // Eager load employee relationship
+        return PresenceResource::collection($presences);
     }
 
     /**
@@ -24,33 +24,33 @@ class PresenceController extends Controller
      */
     public function store(StorePresenceRequest $request)
     {
-        $planning = Presence::create($request->validated());
-        return new PresenceResource($planning);
+        $presence = Presence::create($request->validated());
+        return new PresenceResource($presence);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Presence $planning)
+    public function show(Presence $presence)
     {
-        return new PresenceResource($planning->load('employee'));
+        return new PresenceResource($presence->load('employee'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePresenceRequest $request, Presence $planning)
+    public function update(UpdatePresenceRequest $request, Presence $presence)
     {
-        $planning->update($request->validated());
-        return new PresenceResource($planning);
+        $presence->update($request->validated());
+        return new PresenceResource($presence);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Presence $planning)
+    public function destroy(Presence $presence)
     {
-        $planning->delete();
+        $presence->delete();
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 }
